@@ -5,7 +5,7 @@ cask "coretend" do
   url "https://github.com/ahmetbsbnr/coretend/releases/download/v#{version}/CoreTend-#{version}-arm64.zip",
       verified: "github.com/ahmetbsbnr/coretend/"
   name "CoreTend"
-  desc "Living, local greenhouse for your Mac: see, understand, prune to the Trash"
+  desc "Living, local greenhouse: see what takes space, prune only to the Trash"
   homepage "https://coretend.ahmetbsbnr.com/"
 
   livecheck do
@@ -13,8 +13,8 @@ cask "coretend" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sonoma"
   depends_on arch: :arm64
+  depends_on macos: :sonoma
 
   app "CoreTend.app"
 
